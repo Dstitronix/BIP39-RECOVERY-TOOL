@@ -90,7 +90,7 @@ const PATH_BASE = "m/44'/60'/0'/0";
 ```
 #### change: const TARGET_ADDRESS to your address
 #### put your rest phrase in : const KNOWN_WORDS and the word/s you lost put `?????` there upto 2 words can be recovered for now
-#### put const POS1 = lost word1 position > note its 0 based, eg : if you lost 2nd word put 0, if your 3rd word put 2 and so on
+#### put const POS1 = lost word1 position > note its 0 based, eg : if you lost 2nd word put 1, if your 3rd word put 2 and so on
 #### put const POS2 = lost word2 position > same as above, if you are targetting only 1 word put any 1-9 number here then
 
 #### ctrl + o > enter
