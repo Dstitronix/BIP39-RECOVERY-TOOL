@@ -1,4 +1,6 @@
-## Guide on how to recover lost wallet phrases of any wallet (evm based) - BIP39 logic
+### 🧩Guide on how to recover lost wallet phrases of any wallet (evm based) - BIP39 logic
+----
+#### use wsl/ubuntu and paste the commands one by one :
 
 ```
 sudo apt update
